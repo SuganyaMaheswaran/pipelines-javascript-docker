@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: suganyamaheswaranpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: suganyamaheswaranpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: suganyamaheswaranpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: suganyamaheswaranpipelinesjavascriptdocker 
+          image: myappregistry2026sug.azurecr.io/suganyamaheswaranpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
